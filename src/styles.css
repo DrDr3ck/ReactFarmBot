@@ -1,0 +1,21 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  max-width: fit-content;
+}
+
+.Card {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+
+.Card:hover {
+  background-color: #eeeeeeaa;
+}
+
+.Row {
+  display: flex;
+  flex-direction: row;
+}
