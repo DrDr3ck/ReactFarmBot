@@ -1,6 +1,9 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+}
+
+.TilesContainer {
   margin: 0 auto;
   max-width: fit-content;
 }

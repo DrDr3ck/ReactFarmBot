@@ -8,20 +8,77 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<div className="Row">
-					<Tile>Tile</Tile>
-					<Tile>Tile</Tile>
-					<Tile>Tile</Tile>
-				</div>
-				<div className="Row">
-					<Tile>FCTile</Tile>
-					<Tile>Bot</Tile>
-					<Tile>FCTile</Tile>
-				</div>
-				<div className="Row">
-					<Tile>Tile</Tile>
-					<Tile>Tile</Tile>
-					<Tile>Tile</Tile>
+				<Card className="Card">{'Wheat'}</Card>
+				<div className="TilesContainer">
+					<div className="Row">
+						<Tile
+							handleHarvest={(seed) => {
+								console.log(`handle harvest ${seed}`);
+							}}
+						>
+							Tile
+						</Tile>
+						<Tile
+							handleHarvest={(seed) => {
+								console.log(`handle harvest ${seed}`);
+							}}
+						>
+							Tile
+						</Tile>
+						<Tile
+							handleHarvest={(seed) => {
+								console.log(`handle harvest ${seed}`);
+							}}
+						>
+							Tile
+						</Tile>
+					</div>
+					<div className="Row">
+						<Tile
+							handleHarvest={(seed) => {
+								console.log(`handle harvest ${seed}`);
+							}}
+						>
+							Tile
+						</Tile>
+						<Tile
+							handleHarvest={(seed) => {
+								console.log(`handle harvest ${seed}`);
+							}}
+						>
+							Bot
+						</Tile>
+						<Tile
+							handleHarvest={(seed) => {
+								console.log(`handle harvest ${seed}`);
+							}}
+						>
+							Tile
+						</Tile>
+					</div>
+					<div className="Row">
+						<Tile
+							handleHarvest={(seed) => {
+								console.log(`handle harvest ${seed}`);
+							}}
+						>
+							Tile
+						</Tile>
+						<Tile
+							handleHarvest={(seed) => {
+								console.log(`handle harvest ${seed}`);
+							}}
+						>
+							Tile
+						</Tile>
+						<Tile
+							handleHarvest={(seed) => {
+								console.log(`handle harvest ${seed}`);
+							}}
+						>
+							Tile
+						</Tile>
+					</div>
 				</div>
 			</div>
 		);

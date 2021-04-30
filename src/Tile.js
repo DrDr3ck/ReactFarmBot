@@ -5,7 +5,7 @@ import { Card } from '@material-ui/core';
 
 const growLimit = 10;
 
-const TileFC = () => {
+const Tile = (props) => {
 	const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 	const [ seed, setSeed ] = useState('');
 	const [ grow, setGrow ] = useState(0);
@@ -21,7 +21,7 @@ const TileFC = () => {
 
 	const handleGrow = () => {
 		//console.log('grow' + grow);
-		setGrow((grow) => grow + 1);
+		setGrow((prev) => prev + 1);
 		if (grow < growLimit) {
 			setTimeout(handleGrow, 1000);
 		}
@@ -34,9 +34,11 @@ const TileFC = () => {
 			setTimeout(handleGrow, 1000);
 		} else if (grow < growLimit) {
 			enqueueSnackbar('Wait! Not ready to be harvested', { variant: 'warning' });
+			setGrow((prev) => prev + 1);
 		} else {
 			// ready to harvest
 			enqueueSnackbar('Harvesting', { variant: 'success' });
+			props.handleHarvest(seed);
 			setGrow(0);
 		}
 	};
@@ -48,4 +50,4 @@ const TileFC = () => {
 	);
 };
 
-export default TileFC;
+export default Tile;
